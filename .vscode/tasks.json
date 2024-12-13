@@ -1,0 +1,27 @@
+{
+  "tasks": [
+    {
+      "type": "cppbuild",
+      "label": "BUILD",
+      "command": "/usr/bin/gcc-14",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "${workspaceFolder}/*.c",
+        "-o",
+        "${workspaceFolder}/task_runner"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ],
+  "version": "2.0.0"
+}
