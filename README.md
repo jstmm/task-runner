@@ -22,6 +22,11 @@ Task tasks[] = {
 ```
 
 The format is:
+
 ```
+// For C
 { <task name>, <function name>, <already-run flag>, { <prerequisite tasks>, NULL } }
+
+// For C++
+{ <task name>, <function name>, <already-run flag>, { <prerequisite tasks> } }
 ```

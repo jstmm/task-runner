@@ -2,14 +2,14 @@
   "tasks": [
     {
       "type": "cppbuild",
-      "label": "BUILD",
+      "label": "BUILD C",
       "command": "/usr/bin/gcc-14",
       "args": [
         "-fdiagnostics-color=always",
         "-g",
-        "${workspaceFolder}/*.c",
+        "${workspaceFolder}/c/*.c",
         "-o",
-        "${workspaceFolder}/task_runner"
+        "${workspaceFolder}/c/build/task_runner"
       ],
       "options": {
         "cwd": "${fileDirname}"
@@ -18,8 +18,29 @@
         "$gcc"
       ],
       "group": {
-        "kind": "build",
-        "isDefault": true
+        "kind": "build"
+      }
+    },
+    {
+      "type": "cppbuild",
+      "label": "BUILD CPP",
+      "command": "/usr/bin/g++-14",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-std=c++23",
+        "-g",
+        "${workspaceFolder}/cpp/*.cpp",
+        "-o",
+        "${workspaceFolder}/cpp/build/task_runner"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build"
       }
     }
   ],

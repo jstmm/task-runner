@@ -1,34 +1,63 @@
 {
   "version": "0.2.0",
   "configurations": [
-  {
-    "name": "DEBUG",
-    "type": "cppdbg",
-    "request": "launch",
-    "program": "${workspaceFolder}/task_runner",
-    "args": [
-      "first_task",
-      "second_task",
-      "third_task",
-    ],
-    "stopAtEntry": false,
-    "cwd": "${fileDirname}",
-    "environment": [],
-    "externalConsole": false,
-    "MIMode": "gdb",
-    "setupCommands": [
         {
-            "description": "Enable pretty-printing for gdb",
-            "text": "-enable-pretty-printing",
-            "ignoreFailures": true
-        },
-        {
-            "description": "Set Disassembly Flavor to Intel",
-            "text": "-gdb-set disassembly-flavor intel",
-            "ignoreFailures": true
-        }
-    ],
-    "preLaunchTask": "BUILD"
-  }
+      "name": "DEBUG C",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/c/build/task_runner",
+      "args": [
+        "first_task",
+        "second_task",
+        "third_task",
+      ],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+          {
+              "description": "Enable pretty-printing for gdb",
+              "text": "-enable-pretty-printing",
+              "ignoreFailures": true
+          },
+          {
+              "description": "Set Disassembly Flavor to Intel",
+              "text": "-gdb-set disassembly-flavor intel",
+              "ignoreFailures": true
+          }
+      ],
+      "preLaunchTask": "BUILD C"
+    },
+    {
+      "name": "DEBUG C++",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/cpp/build/task_runner",
+      "args": [
+        "first_task",
+        "second_task",
+        "third_task",
+      ],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+          {
+              "description": "Enable pretty-printing for gdb",
+              "text": "-enable-pretty-printing",
+              "ignoreFailures": true
+          },
+          {
+              "description": "Set Disassembly Flavor to Intel",
+              "text": "-gdb-set disassembly-flavor intel",
+              "ignoreFailures": true
+          }
+      ],
+      "preLaunchTask": "BUILD CPP"
+    }
   ]
 }
